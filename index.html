@@ -22,7 +22,6 @@
         background-color: #1de9b6;
         color: #fafafa;
         font-size: 500%;
-        text-shadow: -1px 2px rgba(0, 0, 0, 0.5);
         white-space: nowrap;
         z-index: 6;
       }
@@ -42,39 +41,113 @@
         z-index: 3;
       }
 
-      section.brand > h1 {
+      #kogo-logo,
+      #kogo-logo > h1,
+      #kogo-logo > img {
+        position: absolute;
+      }
+
+      #kogo-logo {
+        height: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+      }
+
+      #kogo-logo > h1 {
+        bottom: 10%;
+        font-size: 30px;
+        left: 50%;
         margin: 0;
+        text-shadow: -2px 2px 8px rgba(0, 0, 0, 1);
+        transform: translate(-50%, 0);
         z-index: 1;
       }
 
-      section.brand > img {
-        height: auto;
-          width: 55%;
-      }
-
-      section.brand > h1,
-      section.brand > img {
+      #kogo-logo > img {
+        height: 100%;
         left: 50%;
-        position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: auto;
       }
 
-      @media (max-width: 1120px) {
-        section.brand {
-          font-size: 400%;
+      /*k*/
+      #kogo-logo > h1 span:nth-child(1) {
+        color: rgba(255, 224, 130, 255);
+      }
+
+      /*o*/
+      #kogo-logo > h1 span:nth-child(2) {
+        color: rgba(240, 98, 146, 255);
+      }
+
+      /*g*/
+      #kogo-logo > h1 span:nth-child(3) {
+        color: rgba(128, 222, 234, 255);
+      }
+
+      /*o*/
+      #kogo-logo > h1 span:nth-child(4) {
+        color: rgba(255, 171, 145, 255);
+      }
+
+      /*s*/
+      #kogo-logo > h1 span:nth-child(5) {
+        color: rgba(179, 157, 219, 255);
+      }
+
+      /*o*/
+      #kogo-logo > h1 span:nth-child(6) {
+        color: rgba(197, 225, 165, 255);
+      }
+
+      /*f*/
+      #kogo-logo > h1 span:nth-child(7) {
+        color: rgba(240, 98, 146, 255);
+      }
+
+      /*t*/
+      #kogo-logo > h1 span:nth-child(8) {
+        color: rgba(129, 212, 250, 255);
+      }
+
+      /*w*/
+      #kogo-logo > h1 span:nth-child(9) {
+        color: rgba(197, 225, 165, 255);
+      }
+
+      /*a*/
+      #kogo-logo > h1 span:nth-child(10) {
+        color: rgba(255, 204, 128, 255);
+      }
+
+      /*r*/
+      #kogo-logo > h1 span:nth-child(11) {
+        color: rgba(244, 143, 177, 255);
+      }
+
+      /*e*/
+      #kogo-logo > h1 span:nth-child(12) {
+        color: rgba(255, 224, 130, 255);
+      }
+
+      @media (min-width: 768px) {
+        #kogo-logo > h1 {
+          font-size: 80px;
         }
       }
 
-      @media (max-width: 1120px) {
-        section.brand {
-          font-size: 300%;
+      @media (min-width: 992px) {
+        #kogo-logo > h1 {
+          font-size: 110px;
         }
       }
 
-      @media (max-width: 680px) {
-        section.brand {
-          font-size: 250%;
+      @media (min-width: 1200px) {
+        #kogo-logo > h1 {
+          font-size: 130px;
         }
       }
 
@@ -82,8 +155,10 @@
   </head>
   <body>
     <section class="brand">
-      <h1>Kogo Software</h1>
-      <img src="./gorilla.png">
+      <div id="kogo-logo">
+        <h1><span>K</span><span>o</span><span>g</span><span>o</span> <span>S</span><span>o</span><span>f</span><span>t</span><span>w</span><span>a</span><span>r</span><span>e</span></h1>
+        <img src="./gorilla.png">
+      </div>
     </section>
 
     <section class="vision">

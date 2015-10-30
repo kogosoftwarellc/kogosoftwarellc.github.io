@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Copyright Kogo Software LLC 2015 -->
+<html>
+  <head>
+    <style>
+      html, body {
+        font-family: 'Open Sans', 'Sans Serif';
+        height: 100%;
+        margin: 0;
+        width: 100%;
+      }
+
+      section {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        height: 100%;
+        position: relative;
+        width: 100%;
+      }
+
+      section.brand {
+        background-color: #1de9b6;
+        color: #fafafa;
+        font-size: 500%;
+        text-shadow: -1px 2px rgba(0, 0, 0, 0.5);
+        white-space: nowrap;
+        z-index: 6;
+      }
+
+      section.vision {
+        background-color: #fdd835;
+        z-index: 5;
+      }
+
+      section.solutions {
+        background-color: #ff5252;
+        z-index: 4;
+      }
+
+      section.contact {
+        background-color: #2196f3;
+        z-index: 3;
+      }
+
+      section.brand > h1 {
+        margin: 0;
+        z-index: 1;
+      }
+
+      section.brand > img {
+        height: auto;
+          width: 55%;
+      }
+
+      section.brand > h1,
+      section.brand > img {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @media (max-width: 1120px) {
+        section.brand {
+          font-size: 400%;
+        }
+      }
+
+      @media (max-width: 1120px) {
+        section.brand {
+          font-size: 300%;
+        }
+      }
+
+      @media (max-width: 680px) {
+        section.brand {
+          font-size: 250%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="brand">
+      <h1>Kogo Software</h1>
+      <img src="./gorilla.png">
+    </section>
+
+    <section class="vision">
+    </section>
+
+    <section class="solutions">
+    </section>
+
+    <section class="contact">
+    </section>
+  </body>
+  </body>
+  </body>
+  </body>
+</html>

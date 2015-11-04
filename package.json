@@ -1,0 +1,21 @@
+{
+  "name": "kogosoftwarellc.github.io",
+  "version": "1.0.0",
+  "description": "The source code for kogo.io.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kogosoftwarellc/kogosoftwarellc.github.io.git"
+  },
+  "author": "Joseph Spencer",
+  "bugs": {
+    "url": "https://github.com/kogosoftwarellc/kogosoftwarellc.github.io/issues"
+  },
+  "homepage": "https://github.com/kogosoftwarellc/kogosoftwarellc.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.0.3",
+    "run-sequence": "^1.1.4"
+  }
+}

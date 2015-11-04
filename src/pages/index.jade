@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<!-- Copyright Kogo Software LLC 2015 -->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Kogo Software LLC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
-    <style>
+DOCTYPE html
+// Copyright Kogo Software LLC 2015
+html
+  head
+    meta(charset="utf-8")
+    title. Kogo Software LLC
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css')
+    style.
       html, body {
         font-family: 'ABeeZee', sans-serif;
         height: 100%;
@@ -158,23 +158,16 @@
         }
       }
 
-    </style>
-  </head>
-  <body>
-    <section class="brand">
-      <div id="kogo-logo">
-        <h1><span>K</span><span>o</span><span>g</span><span>o</span> <span>S</span><span>o</span><span>f</span><span>t</span><span>w</span><span>a</span><span>r</span><span>e</span></h1>
-        <img src="./gorilla.png" alt="Kogo Software LLC Gorilla Logo">
-      </div>
-    </section>
+  body
+    section.brand
+      #kogo-logo
+        h1
+          each v in ['K', 'o', 'g', 'o', 'S', 'o', 'f', 't', 'w', 'a', 'r', 'e']
+            span=v
+        img(src="./gorilla.png" alt="Kogo Software LLC Gorilla Logo")
 
-    <section class="vision">
-    </section>
+    section.vision
 
-    <section class="solutions">
-    </section>
+    section.solutions
 
-    <section class="contact">
-    </section>
-  </body>
-</html>
+    section.contact

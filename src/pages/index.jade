@@ -8,16 +8,12 @@ html
     link(href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css')
     style
       include ../theme.css
-      include ../kogo-logo.css
+      include ../logo/logo.css
       include ./index.css
 
   body
     section.brand
-      #kogo-logo
-        h1
-          each v in ['K', 'o', 'g', 'o ', 'S', 'o', 'f', 't', 'w', 'a', 'r', 'e']
-            span=v
-        img(src="./gorilla.png" alt="Kogo Software LLC Gorilla Logo")
+      include ../logo/logo.jade
 
     section.vision
 

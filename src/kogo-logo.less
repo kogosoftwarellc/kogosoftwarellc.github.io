@@ -1,0 +1,114 @@
+@import '../node_modules/bootstrap-material-design/less/_colors';
+
+#kogo-logo {
+  cursor: default;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-touch-callout: none;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  width: 80%;
+
+  &,
+  & > h1,
+  & > img {
+    position: absolute;
+  }
+
+  > h1 {
+    bottom: 0;
+    font-size: 30px;
+    left: 50%;
+    margin: 0;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, 0);
+    z-index: 1;
+  }
+
+  > img {
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+
+  > h1 span:nth-child(1) {
+    /*k*/
+    color: @amber-200;
+  }
+
+  > h1 span:nth-child(2) {
+    /*o*/
+    color: @pink-300;
+  }
+
+  > h1 span:nth-child(3) {
+    /*g*/
+    color: @cyan-200;
+  }
+
+  > h1 span:nth-child(4) {
+    /*o*/
+    color: @deep-orange-200;
+  }
+
+  > h1 span:nth-child(5) {
+    /*s*/
+    color: @deep-purple-200;
+  }
+
+  > h1 span:nth-child(6) {
+    /*o*/
+    color: @light-green-200;
+  }
+
+  > h1 span:nth-child(7) {
+    /*f*/
+    color: @pink-300;
+  }
+
+  > h1 span:nth-child(8) {
+    /*t*/
+    color: @light-blue-200;
+  }
+
+  > h1 span:nth-child(9) {
+    /*w*/
+    color: @light-green-200;
+  }
+
+  > h1 span:nth-child(10) {
+    /*a*/
+    color: @orange-200;
+  }
+
+  > h1 span:nth-child(11) {
+    /*r*/
+    color: @pink-200;
+  }
+
+  > h1 span:nth-child(12) {
+    /*e*/
+    color: @amber-200;
+  }
+
+  @media (min-width: 768px) {
+    > h1 {
+      font-size: 80px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    > h1 {
+      font-size: 110px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    > h1 {
+      font-size: 130px;
+    }
+  }
+}

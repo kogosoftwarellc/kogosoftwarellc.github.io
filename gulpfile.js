@@ -1,5 +1,7 @@
+var autoprefixer = require('gulp-autoprefixer');
 var gulp = require('gulp');
 var jade = require('gulp-jade');
+var less = require('gulp-less');
 var path = require('path');
 var runSequence = require('run-sequence');
 
@@ -10,6 +12,13 @@ var PATHS = {
   src: SRC_DIR,
   static: path.resolve(SRC_DIR, 'static')
 };
+
+gulp.task('build:less', function() {
+  return gulp.src(PATHS.src + '/**/*.less')
+    .pipe(less())
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(PATHS.src));
+});
 
 gulp.task('build:pages', function() {
   return gulp.src(PATHS.pages + '/*.jade')
@@ -22,10 +31,9 @@ gulp.task('build:static', function() {
     .pipe(gulp.dest(PATHS.dist));
 });
 
-gulp.task('build', ['build:pages', 'build:static']);
-
 gulp.task('default', function(cb) {
   runSequence(
-    'build',
+    'build:less',
+    ['build:pages', 'build:static'],
     cb);
 });

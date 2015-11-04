@@ -2,7 +2,7 @@
 
 TMP_DIR="/tmp/github-pages-`date +%s`"
 
-rm -rf "/tmp/github-pages-*"
+rm -rf /tmp/github-pages-*
 
 echo "Current directory: $PWD"
 echo "Temp directory $TMP_DIR"
@@ -15,4 +15,6 @@ mv dist $TMP_DIR
 
 git checkout master
 
-mv "$TMP_DIR/*" .
+git update-index --assume-unchanged node_modules
+
+mv $TMP_DIR/* .

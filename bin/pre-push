@@ -1,15 +1,11 @@
 #!/bin/bash
 
-TMP_DIR="/tmp/`date +%s`"
+TMP_DIR="/tmp/github-pages-`date +%s`"
+
+rm -rf "/tmp/github-pages-*"
 
 echo "Current directory: $PWD"
 echo "Temp directory $TMP_DIR"
-
-exit
-
-if [[ -d "$TMP_DIR" ]]; then
-  rm -rf "$TMP_DIR"
-fi
 
 npm install
 

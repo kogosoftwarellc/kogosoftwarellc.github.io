@@ -1,0 +1,17 @@
+#!/bin/bash
+
+TMP_DIR="/tmp/`date +%s`"
+
+
+
+mkdir -p $TMP_DIR
+
+npm install
+
+gulp
+
+mv dist/* $TMP_DIR
+
+git checkout master
+
+cp -R $TMP_DIR/* .

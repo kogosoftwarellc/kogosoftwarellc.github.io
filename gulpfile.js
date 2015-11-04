@@ -22,8 +22,10 @@ gulp.task('build:static', function() {
     .pipe(gulp.dest(PATHS.dist));
 });
 
-gulp.task('build', function(cb) {
+gulp.task('build', ['build:pages', 'build:static']);
+
+gulp.task('default', function(cb) {
   runSequence(
-    ['build:pages', 'build:static'],
+    'build',
     cb);
 });

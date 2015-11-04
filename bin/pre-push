@@ -2,16 +2,21 @@
 
 TMP_DIR="/tmp/`date +%s`"
 
+echo "Current directory: $PWD"
+echo "Temp directory $TMP_DIR"
 
+exit
 
-mkdir -p $TMP_DIR
+if [[ -d "$TMP_DIR" ]]; then
+  rm -rf "$TMP_DIR"
+fi
 
 npm install
 
 gulp
 
-mv dist/* $TMP_DIR
+mv dist $TMP_DIR
 
 git checkout master
 
-cp -R $TMP_DIR/* .
+mv "$TMP_DIR/*" .

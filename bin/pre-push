@@ -26,4 +26,4 @@ git push origin master
 
 git checkout src
 
-mv ${PREFIX_TMP_DIR}node_modules .
+mv ${PREFIX_TMP_DIR}node_modules node_modules

@@ -1,8 +1,10 @@
 #!/bin/bash
 
-TMP_DIR="/tmp/github-pages-`date +%s`"
+PREFIX_TMP_DIR="/tmp/github-pages-"
 
-rm -rf /tmp/github-pages-*
+TMP_DIR="$PREFIX_TMP_DIR`date +%s`"
+
+rm -rf $PREFIX_TMP_DIR*
 
 echo "Current directory: $PWD"
 echo "Temp directory $TMP_DIR"
@@ -12,9 +14,16 @@ npm install
 gulp
 
 mv dist $TMP_DIR
+mv node_modules ${PREFIX_TMP_DIR}node_modules
 
 git checkout master
 
-git update-index --assume-unchanged node_modules
-
 mv $TMP_DIR/* .
+
+git commit -a -m updates
+
+git push origin master
+
+git checkout src
+
+mv ${PREFIX_TMP_DIR}node_modules .

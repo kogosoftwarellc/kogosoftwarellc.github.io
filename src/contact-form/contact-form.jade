@@ -1,8 +1,8 @@
 mixin contact-form
   .card.large.contact-form
     form(
-      action="https://docs.google.com/a/kogosoftwarellc.com/forms/d/135v56r34612R2BTeVGPrQaxFQOquE5AwMtAPfPRF9Ng/formResponse"
-      onsubmit="return submitContactForm(this);")
+      action="https://docs.google.com/a/kogosoftwarellc.com/forms/d/135v56r34612R2BTeVGPrQaxFQOquE5AwMtAPfPRF9Ng"
+      onsubmit="return submitGoogleForm(this);")
         input(name="entry.1703994313" placeholder="Name")
         br
         input(name="entry.1009702695" placeholder="Company")
@@ -18,25 +18,6 @@ mixin contact-form
       .confirmation.
         Thanks for reaching out!  We'll respond to your inquiry in a timely manner.
 
-    script.
-      function submitContactForm(form) {
-        try {
-          var data = [].slice.call(form).map(function(control) {
-            return 'value' in control && 'name' in control ?
-              control.name + '=' + control.value :
-              '';
-          }).join('&');
+    script
+      include ../../node_modules/google-form/google-form.js
 
-          var r = new XMLHttpRequest();
-
-          r.open("POST", form.action, true);
-          r.setRequestHeader('Accept', 'application/xml, text/xml, */*; q=0.01');
-          r.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
-          r.send(data);
-          r.onreadystatechange = function() {};
-        } catch(e) {}
-
-        form.parentNode.className += ' submitted';
-
-        return false;
-      }

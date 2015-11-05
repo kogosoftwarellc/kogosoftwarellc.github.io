@@ -1,0 +1,17 @@
+.contact-form {
+  text-align: left;
+
+  > .confirmation {
+    display: none;
+  }
+
+  &.submitted {
+    form {
+      display: none;
+    }
+
+    > .confirmation {
+      display: block;
+    }
+  }
+}

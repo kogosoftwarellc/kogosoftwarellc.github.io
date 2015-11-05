@@ -1,6 +1,5 @@
 section {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  height: 100%;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -9,22 +8,26 @@ section {
     background-color: #1de9b6;
     color: #fafafa;
     font-size: 500%;
+    min-height: 100%;
     white-space: nowrap;
     z-index: 6;
   }
 
-  &.vision {
+  &.bio {
     background-color: #fdd835;
+    text-align: center;
     z-index: 5;
   }
 
-  &.solutions {
+  &.portfolio {
     background-color: #ff5252;
+    min-height: 100%;
     z-index: 4;
   }
 
   &.contact {
     background-color: #2196f3;
+    min-height: 100%;
     z-index: 3;
   }
 }

@@ -27,7 +27,7 @@ gulp.task('build:pages', function() {
 });
 
 gulp.task('build:static', function() {
-  return gulp.src(PATHS.static + '/*')
+  return gulp.src(PATHS.static + '/**/*')
     .pipe(gulp.dest(PATHS.dist));
 });
 

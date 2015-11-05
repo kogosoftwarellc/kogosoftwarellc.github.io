@@ -20,7 +20,8 @@ git checkout master
 
 mv $TMP_DIR/* .
 
-git commit -a -m updates
+git add -A .
+git commit -m updates
 
 git push origin master
 

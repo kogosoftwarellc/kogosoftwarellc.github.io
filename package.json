@@ -14,11 +14,16 @@
   "homepage": "https://github.com/kogosoftwarellc/kogosoftwarellc.github.io#readme",
   "devDependencies": {
     "bootstrap-material-design": "^0.3.0",
+    "browser-sync": "^2.9.12",
+    "del": "^2.0.2",
     "google-form": "^1.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssimport": "^2.1.1",
     "gulp-jade": "^1.1.0",
     "gulp-less": "^3.0.3",
+    "gulp-sourcemaps": "^1.6.0",
     "less": "^2.5.3",
     "run-sequence": "^1.1.4"
   }

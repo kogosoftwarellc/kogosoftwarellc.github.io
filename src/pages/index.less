@@ -1,3 +1,5 @@
+@import '../../node_modules/bootstrap-material-design/less/_colors';
+
 section {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -5,28 +7,29 @@ section {
   width: 100%;
 
   &.brand {
-    background-color: #1de9b6;
-    color: #fafafa;
+    background-color: @teal-A400;
+    color: @grey-50;
     font-size: 500%;
     min-height: 100%;
     white-space: nowrap;
     z-index: 6;
   }
 
+
   &.bio {
-    background-color: #fdd835;
+    background-color: @yellow-200;
     text-align: center;
     z-index: 5;
   }
 
   &.portfolio {
-    background-color: #ff5252;
+    background-color: @red-A200;
     min-height: 100%;
     z-index: 4;
   }
 
   &.contact {
-    background-color: #2196f3;
+    background-color: @blue-500;
     min-height: 100%;
     text-align: center;
     z-index: 3;

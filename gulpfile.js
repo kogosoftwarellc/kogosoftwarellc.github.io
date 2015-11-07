@@ -1,9 +1,15 @@
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync');
+var concat = require('gulp-concat');
+var cssimport = require('gulp-cssimport');
+var del = require('del');
 var gulp = require('gulp');
 var jade = require('gulp-jade');
 var less = require('gulp-less');
 var path = require('path');
+var reload = browserSync.reload;
 var runSequence = require('run-sequence');
+var sourcemaps = require('gulp-sourcemaps');
 
 var SRC_DIR = path.resolve(__dirname, 'src');
 var PATHS = {
@@ -13,22 +19,41 @@ var PATHS = {
   static: path.resolve(SRC_DIR, 'static')
 };
 
+gulp.task('clean', function(cb) {
+  return del([PATHS.dist]);
+});
+
 gulp.task('build:less', function() {
   return gulp.src(PATHS.src + '/**/*.less')
+    .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(gulp.dest(PATHS.src));
+    .pipe(cssimport())
+    .pipe(concat('index.css'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(PATHS.dist))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('build:pages', function() {
-  return gulp.src(PATHS.pages + '/*.jade')
+  return gulp.src(PATHS.pages + '/**/*.jade')
     .pipe(jade())
     .pipe(gulp.dest(PATHS.dist));
 });
 
+
 gulp.task('build:static', function() {
   return gulp.src(PATHS.static + '/**/*')
     .pipe(gulp.dest(PATHS.dist));
+});
+
+gulp.task('build:pages:watch', ['build:pages'], browserSync.reload);
+
+gulp.task('serve', ['clean', 'default'], function() {
+  browserSync.init({server: PATHS.dist});
+
+  gulp.watch(PATHS.src + '/**/*.jade', ['build:pages:watch']);
+  gulp.watch(PATHS.src + '/**/*.less', ['build:less']);
 });
 
 gulp.task('default', function(cb) {

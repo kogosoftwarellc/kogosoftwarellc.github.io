@@ -7,13 +7,7 @@ html
     meta(charset="utf-8")
     title. Kogo Software LLC
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css')
-    style
-      include ../theme.css
-      include ../card/card.css
-      include ../contact-form/contact-form.css
-      include ../logo/logo.css
-      include ./index.css
+    link(href='/index.css' rel='stylesheet' type='text/css')
 
   body
     section.brand
@@ -24,7 +18,7 @@ html
       +card('What we do', 'images/man-drawing-on-glass.png', 'We build, consult, architect, listen, suggest, train, mentor, reason, follow, lead, serve, do whatever it takes to make your vision become reality.')
       +card('The tools we use', 'images/tools-we-use.png', 'We use the latest open source technologies, but are not limited by them.  If you have existing tools in place, we can use those as well.  We adapt to any environment, yet prefer current best practices wherever possible.')
 
-    section.portfolio
+    //-section.portfolio
 
     section.contact
       +contact-form()

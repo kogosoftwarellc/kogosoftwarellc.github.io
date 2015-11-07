@@ -1,6 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '../node_modules/bootstrap-material-design/less/_colors';
+
+html, body, input, textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
 html, body {
-  font-family: 'ABeeZee', sans-serif;
   height: 100%;
   margin: 0;
   width: 100%;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+input, textarea {
+  border: 0;
+  border-bottom: 1px solid @grey-300;
+  display: block;
+  font-size: 20px;
+  margin-top: 15px;
+  outline: 0;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+label {
+  color: @grey-400;
+  display: block;
+  margin-top: 15px;
+}
+
+button {
+  background: none;
+  border: 0;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  &:active {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &.go {
+    background-color: @blue-500;
+    color: @white;
+  }
 }

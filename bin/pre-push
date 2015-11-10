@@ -42,7 +42,7 @@ git pull origin master
 
 clear_dir
 
-cp -R $TMP_DIR/* .
+cp -R ${TMP_DIR}dist/* .
 
 set +x
 

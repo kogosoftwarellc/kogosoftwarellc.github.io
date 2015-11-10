@@ -22,6 +22,8 @@ gulp
 
 mv dist $TMP_DIR
 
+rm -rf node_modules
+
 for file in `find .`;do
   if [[ "$file" != '.git' && "$file" != '.' && "$file" != '..' ]];then
     rm -rf $file

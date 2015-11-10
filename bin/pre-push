@@ -21,13 +21,16 @@ mv node_modules ${PREFIX_TMP_DIR}node_modules
 mv src ${PREFIX_TMP_DIR}src
 
 git checkout master
+git pull origin master
 
 cp -R $TMP_DIR/* .
 
-git add -A .
-git commit -m updates
-
-git push origin master
+if [ -n "`git status --porcelain`"];then
+  git add -A .
+  git commit -m updates
+  
+  git push origin master
+fi
 
 git checkout src
 

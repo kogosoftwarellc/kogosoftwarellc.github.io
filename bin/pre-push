@@ -3,35 +3,44 @@
 set -e
 set -x
 
-PREFIX_TMP_DIR="/tmp/github-pages-"
+function clear_dir() {
+  for file in `ls -a`;do
+    if [[ "$file" != '.git' && "$file" != '.' && "$file" != '..' ]];then
+      rm -rf $file
+    fi
+  done
+}
 
-TMP_DIR="$PREFIX_TMP_DIR`date +%s`"
+function clean_working_copy() {
+  git clean -fd
+}
 
-rm -rf $PREFIX_TMP_DIR*
+TMP_DIR="/tmp/github-pages-`date +%s`"
 
 echo "Current directory: $PWD"
 echo "Temp directory $TMP_DIR"
 
-git pull origin src
+clean_working_copy
 
-rm -rf node_modules
+git pull origin src
 
 npm install
 
 gulp
 
-mv dist $TMP_DIR
+mv dist ${TMP_DIR}dist
 
-rm -rf node_modules
+mv node_modules ${TMP_DIR}node_modules
 
-for file in `ls -a`;do
-  if [[ "$file" != '.git' && "$file" != '.' && "$file" != '..' ]];then
-    rm -rf $file
-  fi
-done
+clean_working_copy
 
 git checkout master
+
+clean_working_copy
+
 git pull origin master
+
+clear_dir
 
 cp -R $TMP_DIR/* .
 
@@ -50,3 +59,5 @@ fi
 set -x
 
 git checkout src
+
+mv ${TMP_DIR}node_modules .

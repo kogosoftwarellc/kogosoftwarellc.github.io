@@ -14,6 +14,8 @@ echo "Temp directory $TMP_DIR"
 
 git pull origin src
 
+rm -rf node_modules
+
 npm install
 
 gulp

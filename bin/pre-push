@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -x
+
 PREFIX_TMP_DIR="/tmp/github-pages-"
 
 TMP_DIR="$PREFIX_TMP_DIR`date +%s`"
@@ -19,7 +22,7 @@ mv src ${PREFIX_TMP_DIR}src
 
 git checkout master
 
-mv $TMP_DIR/* .
+cp -R $TMP_DIR/* .
 
 git add -A .
 git commit -m updates

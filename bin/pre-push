@@ -25,12 +25,17 @@ git pull origin master
 
 cp -R $TMP_DIR/* .
 
+set +x
+
 if [ -n "`git status --porcelain`" ];then
+  set -x
   git add -A .
   git commit -m updates
   
   git push origin master
 fi
+
+set -x
 
 git checkout src
 

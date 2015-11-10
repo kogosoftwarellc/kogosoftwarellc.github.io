@@ -1,0 +1,368 @@
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ABeeZee'), local('ABeeZee-Regular'), url(https://fonts.gstatic.com/s/abeezee/v4/JYPhMn-3Xw-JGuyB-fEdNA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+}
+
+/*
+
+To get this list of colors inject jQuery at http://www.google.com/design/spec/style/color.html#color-color-palette
+
+Then, run this script to get the list.
+
+
+(function() {
+  var colors = {}, main = {};
+  $(".color-group").each(function() {
+    var color = $(this).find(".name").text().trim().toLowerCase().replace(" ", "-");
+    colors[color] = {};
+
+    $(this).find(".color").not(".main-color").each(function() {
+      var shade = $(this).find(".shade").text().trim(),
+          hex   = $(this).find(".hex").text().trim();
+
+      colors[color][shade] = hex;
+    });
+    main[color] = color + "-" + $(this).find(".main-color .shade").text().trim();
+
+  });
+  var LESS = "";
+  $.each(colors, function(name, shades) {
+    LESS += "\n\n";
+    $.each(shades, function(shade, hex) {
+      LESS += "@" + name + "-" + shade + ": " + hex + ";\n";
+    });
+    if (main[name]) {
+      LESS += "@" + name + ": " + main[name] + ";\n";
+    }
+  });
+  console.log(LESS);
+})();
+
+
+*/
+html,
+body,
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+.img-responsive {
+  width: 100%;
+}
+input,
+textarea {
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: block;
+  font-size: 20px;
+  margin-top: 15px;
+  outline: 0;
+  padding-bottom: 5px;
+  width: 100%;
+}
+textarea {
+  height: 100px;
+  resize: none;
+}
+label {
+  color: #bdbdbd;
+  display: block;
+  margin-top: 15px;
+}
+button {
+  background: none;
+  border: 0;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+button:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+button.go {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 1px 2px gray;
+  display: inline-block;
+  margin: 30px;
+  max-width: 300px;
+  vertical-align: top;
+}
+.card.medium {
+  max-width: 550px;
+}
+.card.large {
+  max-width: 800px;
+}
+.card > .content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.card > .content > h2 {
+  text-align: center;
+}
+.card > .content > p {
+  text-align: justify;
+}
+
+.contact-form {
+  text-align: left;
+}
+.contact-form .confirmation {
+  display: none;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.contact-form .submitted h2,
+.contact-form .submitted p,
+.contact-form .submitted form {
+  display: none;
+}
+.contact-form .submitted .confirmation {
+  display: block;
+}
+
+/*
+
+To get this list of colors inject jQuery at http://www.google.com/design/spec/style/color.html#color-color-palette
+
+Then, run this script to get the list.
+
+
+(function() {
+  var colors = {}, main = {};
+  $(".color-group").each(function() {
+    var color = $(this).find(".name").text().trim().toLowerCase().replace(" ", "-");
+    colors[color] = {};
+
+    $(this).find(".color").not(".main-color").each(function() {
+      var shade = $(this).find(".shade").text().trim(),
+          hex   = $(this).find(".hex").text().trim();
+
+      colors[color][shade] = hex;
+    });
+    main[color] = color + "-" + $(this).find(".main-color .shade").text().trim();
+
+  });
+  var LESS = "";
+  $.each(colors, function(name, shades) {
+    LESS += "\n\n";
+    $.each(shades, function(shade, hex) {
+      LESS += "@" + name + "-" + shade + ": " + hex + ";\n";
+    });
+    if (main[name]) {
+      LESS += "@" + name + ": " + main[name] + ";\n";
+    }
+  });
+  console.log(LESS);
+})();
+
+
+*/
+#logo {
+  cursor: default;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-touch-callout: none;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 80%;
+}
+#logo,
+#logo > h1,
+#logo > img {
+  position: absolute;
+}
+#logo > h1 {
+  bottom: 0;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 30px;
+  left: 50%;
+  margin: 0;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 1;
+}
+#logo > img {
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  user-drag: none;
+  -webkit-user-drag: none;
+  width: auto;
+}
+#logo > h1 span:nth-child(1) {
+  /*k*/
+  color: #fff59d;
+}
+#logo > h1 span:nth-child(2) {
+  /*o*/
+  color: #f06292;
+}
+#logo > h1 span:nth-child(3) {
+  /*g*/
+  color: #2196f3;
+}
+#logo > h1 span:nth-child(4) {
+  /*o*/
+  color: #ffab91;
+}
+#logo > h1 span:nth-child(5) {
+  /*s*/
+  color: #b39ddb;
+}
+#logo > h1 span:nth-child(6) {
+  /*o*/
+  color: #c5e1a5;
+}
+#logo > h1 span:nth-child(7) {
+  /*f*/
+  color: #f06292;
+}
+#logo > h1 span:nth-child(8) {
+  /*t*/
+  color: #2196f3;
+}
+#logo > h1 span:nth-child(9) {
+  /*w*/
+  color: #c5e1a5;
+}
+#logo > h1 span:nth-child(10) {
+  /*a*/
+  color: #ffab91;
+}
+#logo > h1 span:nth-child(11) {
+  /*r*/
+  color: #f48fb1;
+}
+#logo > h1 span:nth-child(12) {
+  /*e*/
+  color: #fff59d;
+}
+@media (min-width: 400px) {
+  #logo > h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 500px) {
+  #logo > h1 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 768px) {
+  #logo > h1 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 992px) {
+  #logo > h1 {
+    font-size: 110px;
+  }
+}
+@media (min-width: 1200px) {
+  #logo > h1 {
+    font-size: 130px;
+  }
+}
+
+/*
+
+To get this list of colors inject jQuery at http://www.google.com/design/spec/style/color.html#color-color-palette
+
+Then, run this script to get the list.
+
+
+(function() {
+  var colors = {}, main = {};
+  $(".color-group").each(function() {
+    var color = $(this).find(".name").text().trim().toLowerCase().replace(" ", "-");
+    colors[color] = {};
+
+    $(this).find(".color").not(".main-color").each(function() {
+      var shade = $(this).find(".shade").text().trim(),
+          hex   = $(this).find(".hex").text().trim();
+
+      colors[color][shade] = hex;
+    });
+    main[color] = color + "-" + $(this).find(".main-color .shade").text().trim();
+
+  });
+  var LESS = "";
+  $.each(colors, function(name, shades) {
+    LESS += "\n\n";
+    $.each(shades, function(shade, hex) {
+      LESS += "@" + name + "-" + shade + ": " + hex + ";\n";
+    });
+    if (main[name]) {
+      LESS += "@" + name + ": " + main[name] + ";\n";
+    }
+  });
+  console.log(LESS);
+})();
+
+
+*/
+section {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+section.brand {
+  background-color: #1de9b6;
+  color: #fafafa;
+  font-size: 500%;
+  min-height: 100%;
+  white-space: nowrap;
+  z-index: 6;
+}
+section.bio {
+  background-color: #fff59d;
+  text-align: center;
+  z-index: 5;
+}
+section.portfolio {
+  background-color: #ff5252;
+  min-height: 100%;
+  z-index: 4;
+}
+section.contact {
+  background-color: #2196f3;
+  min-height: 100%;
+  text-align: center;
+  z-index: 3;
+}

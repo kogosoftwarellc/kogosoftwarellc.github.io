@@ -60,4 +60,4 @@ set -x
 
 git checkout src
 
-mv ${TMP_DIR}node_modules .
+mv ${TMP_DIR}node_modules node_modules

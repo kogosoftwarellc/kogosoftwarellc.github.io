@@ -21,8 +21,7 @@ npm install
 gulp
 
 mv dist $TMP_DIR
-mv node_modules ${PREFIX_TMP_DIR}node_modules
-mv src ${PREFIX_TMP_DIR}src
+rm -rf src
 
 git checkout master
 git pull origin master
@@ -44,6 +43,3 @@ fi
 set -x
 
 git checkout src
-
-mv ${PREFIX_TMP_DIR}node_modules node_modules
-mv ${PREFIX_TMP_DIR}src src

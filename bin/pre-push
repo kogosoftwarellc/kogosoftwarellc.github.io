@@ -12,6 +12,8 @@ rm -rf $PREFIX_TMP_DIR*
 echo "Current directory: $PWD"
 echo "Temp directory $TMP_DIR"
 
+git pull origin src
+
 npm install
 
 gulp

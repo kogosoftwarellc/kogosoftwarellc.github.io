@@ -23,7 +23,7 @@ gulp
 mv dist $TMP_DIR
 
 for file in `find .`;do
-  if [ "$file" != ".git" ];then
+  if [[ "$file" != '.git' && "$file" != '.' && "$file" != '..' ]];then
     rm -rf $file
   fi
 done

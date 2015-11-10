@@ -21,7 +21,12 @@ npm install
 gulp
 
 mv dist $TMP_DIR
-rm -rf src
+
+for file in `find .`;do
+  if [ "$file" != ".git" ];then
+    rm -rf $file
+  fi
+done
 
 git checkout master
 git pull origin master

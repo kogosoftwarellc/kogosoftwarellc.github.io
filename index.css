@@ -61,6 +61,10 @@ body {
   margin: 0;
   width: 100%;
 }
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+}
 .img-responsive {
   width: 100%;
 }
@@ -109,6 +113,7 @@ button.go {
   display: inline-block;
   margin: 30px;
   max-width: 300px;
+  min-height: 400px;
   vertical-align: top;
 }
 .card.medium {
@@ -116,6 +121,12 @@ button.go {
 }
 .card.large {
   max-width: 800px;
+}
+.card > .image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 175px;
 }
 .card > .content {
   padding-left: 15px;
@@ -352,6 +363,8 @@ section.brand {
 }
 section.bio {
   background-color: #fff59d;
+  display: table;
+  min-height: 100%;
   text-align: center;
   z-index: 5;
 }
@@ -362,6 +375,7 @@ section.portfolio {
 }
 section.contact {
   background-color: #2196f3;
+  display: table;
   min-height: 100%;
   text-align: center;
   z-index: 3;

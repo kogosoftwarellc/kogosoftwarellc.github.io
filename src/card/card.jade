@@ -1,6 +1,10 @@
 mixin card(title, imagePath, text)
   .card
-    img(class='img-responsive' src=imagePath)
+    div(
+      class= 'image'
+      style= 'background-image: url(' + imagePath + ')'
+    )
     .content
       h2=title
-      p=text
+      p
+        | !{text}

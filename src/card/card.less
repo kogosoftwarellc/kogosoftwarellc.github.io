@@ -4,6 +4,7 @@
   display: inline-block;
   margin: 30px;
   max-width: 300px;
+  min-height: 400px;
   vertical-align: top;
 
   &.medium {
@@ -12,6 +13,13 @@
 
   &.large {
     max-width: 800px;
+  }
+
+  > .image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 175px;
   }
 
   > .content {

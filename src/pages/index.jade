@@ -1,7 +1,10 @@
 include ../card/card.jade
 include ../contact-form/contact-form.jade
 doctype html
-// Copyright Kogo Software LLC 2015
+//
+  The IMPACT Technology Recruiting logo is being used according to license terms which can be found on their website at http://go-impact.com/IT/legal.html.
+
+  All other content on this website is held in copyright by Kogo Software LLC.
 html
   head
     meta(charset="utf-8")
@@ -14,13 +17,18 @@ html
       include ../logo/logo.jade
 
     section.bio
-      //-+card('Who we are', 'images/sideways-gorilla-view.png', 'Known for their intelligence and their ability to feel, we are software gorillas!  We seek learning, growth, solutions, peace, order, understanding, harmony, joy, and food.  We feast on difficult problems and challenges.  "Can do" is our motto.')
-      //-+card('What we do', 'images/man-drawing-on-glass.png', 'We build, consult, architect, listen, suggest, train, mentor, reason, follow, lead, serve, do whatever it takes to make your vision become a reality.')
-      +card('Who we are', 'images/man-drawing-on-glass.png', 'We are programmers, consultants, architects, followers, leaders, listeners, trainers, mentors, servants... We are who you need us to be to complete your project and see that your goals are met.')
-      +card('The tools we use', 'images/tools-we-use.png', 'We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we\'ll use them.  We adapt to any environment, yet prefer current best practices wherever possible.')
+      .cell
+        //-+card('Who we are', 'images/sideways-gorilla-view.png', 'Known for their intelligence and their ability to feel, we are software gorillas!  We seek learning, growth, solutions, peace, order, understanding, harmony, joy, and food.  We feast on difficult problems and challenges.  "Can do" is our motto.')
+        //-+card('What we do', 'images/man-drawing-on-glass.png', 'We build, consult, architect, listen, suggest, train, mentor, reason, follow, lead, serve, do whatever it takes to make your vision become a reality.')
+        +card('Who we are', 'images/professional-programmer-smiling.jpg', 'We are programmers, consultants, architects, followers, leaders, listeners, trainers, mentors, servants... We are who you need us to be to complete your project and see that your goals are met.')
+        +card('The tools we use', 'images/tools-we-use.png', 'We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we\'ll use them.  We adapt to any environment, yet prefer current best practices wherever possible.')
+        +card('Our Partners', 'images/impact-technology-recruiting-logo.jpg', 'We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.')
+        +card('Our Business Model', 'images/building-software.jpg', 'We alternatve between building, imagining, and creating software.  When we are contracted to do so for other companies, we are focused on their objectives.  When we are in between placements for said companies, we build apps that make the world a better place.')
+        +card('Open Source Projects', 'images/github-logo.png', 'We have several open source projects that we maintain and have published for the community.  You can check them out on <a href="https://github.com/kogosoftwarellc">github</a>.')
 
     //-section.portfolio
 
     section.contact
-      +contact-form()
-    include ../scripts/ga.jade
+      .cell
+        +contact-form()
+      include ../scripts/ga.jade

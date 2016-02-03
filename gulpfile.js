@@ -50,10 +50,12 @@ gulp.task('build:static', function() {
 gulp.task('build:pages:watch', ['build:pages'], browserSync.reload);
 
 gulp.task('serve', ['clean', 'default'], function() {
-  browserSync.init({server: PATHS.dist});
-
   gulp.watch(PATHS.src + '/**/*.jade', ['build:pages:watch']);
   gulp.watch(PATHS.src + '/**/*.less', ['build:less']);
+  gulp.watch(PATHS.src + '/**/*.jpg', ['build:static']);
+  gulp.watch(PATHS.src + '/**/*.png', ['build:static']);
+
+  browserSync.init({server: PATHS.dist});
 });
 
 gulp.task('default', function(cb) {

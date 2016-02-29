@@ -4,7 +4,6 @@ var concat = require('gulp-concat');
 var cssimport = require('gulp-cssimport');
 var del = require('del');
 var gulp = require('gulp');
-var jade = require('gulp-jade');
 var less = require('gulp-less');
 var path = require('path');
 var reload = browserSync.reload;
@@ -36,8 +35,7 @@ gulp.task('build:less', function() {
 });
 
 gulp.task('build:pages', function() {
-  return gulp.src(PATHS.pages + '/**/*.jade')
-    .pipe(jade())
+  return gulp.src(PATHS.pages + '/**/*.html')
     .pipe(gulp.dest(PATHS.dist));
 });
 
@@ -50,7 +48,7 @@ gulp.task('build:static', function() {
 gulp.task('build:pages:watch', ['build:pages'], browserSync.reload);
 
 gulp.task('serve', ['clean', 'default'], function() {
-  gulp.watch(PATHS.src + '/**/*.jade', ['build:pages:watch']);
+  gulp.watch(PATHS.src + '/**/*.html', ['build:pages:watch']);
   gulp.watch(PATHS.src + '/**/*.less', ['build:less']);
   gulp.watch(PATHS.src + '/**/*.jpg', ['build:static']);
   gulp.watch(PATHS.src + '/**/*.png', ['build:static']);

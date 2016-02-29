@@ -1,4 +1,3 @@
-include ../card/card.jade
 include ../contact-form/contact-form.jade
 doctype html
 //
@@ -10,27 +9,68 @@ html
     meta(charset="utf-8")
     title Kogo Software LLC
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name='theme-color' content='#6a1b9a')
+    meta(name='theme-color' content='#1C4863')
     link(href='/index.css' rel='stylesheet' type='text/css')
 
   body
-    section.brand
-      include ../logo/logo.jade
+    section#header
+      .logo
 
-    section.bio
-      .cell
-        //-+card('Who we are', 'images/sideways-gorilla-view.png', 'Known for their intelligence and their ability to feel, we are software gorillas!  We seek learning, growth, solutions, peace, order, understanding, harmony, joy, and food.  We feast on difficult problems and challenges.  "Can do" is our motto.')
-        //-+card('What we do', 'images/man-drawing-on-glass.png', 'We build, consult, architect, listen, suggest, train, mentor, reason, follow, lead, serve, do whatever it takes to make your vision become a reality.')
-        +card('Who we are', 'images/professional-programmer-smiling.jpg', 'We are programmers, consultants, architects, followers, leaders, listeners, trainers, mentors, servants... We are who you need us to be to complete your project and see that your goals are met.')
-        +card('The tools we use', 'images/tools-we-use.png', 'We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we\'ll use them.  We adapt to any environment, yet prefer current best practices wherever possible.')
-        +card('Our Partners', 'images/impact-technology-recruiting-logo.jpg', 'We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.')
-        br
-        +card('Our Business Model', 'images/building-software.jpg', 'We alternate between building, imagining, and creating software.  When we\'re contracted to do so, we\'re focused on the objectives of other companies.  When we\'re not working for other companies, we build apps that make the world a better place.')
-        +card('Open Source Projects', 'images/github-logo.png', 'We have several open source projects that we maintain and have published for the community.  You can check them out on <a href="https://github.com/kogosoftwarellc">github</a>.')
+      .brand
+        h1 We are 
+          span.name Kogo
+          
+        p.mission Kogo provides the technical resources you need, when you need them.  What that means is that we have programmers, consultants, architects, leaders, listeners, trainers, mentors, or anything inbetween, ready to help you in a moment's notice.
 
-    //-section.portfolio
+      .navigation
+        ol
+          li 
+            a(href="#header") Who we are
+          li 
+            a(href="#tools") Tools
+          li 
+            a(href="#partners") Partners
+          li 
+            a(href="#business") Business model
+          li 
+            a(href="#github") Open source projects
+          li 
+            a(href="#contact") Connect with us
 
-    section.contact
+    section#tools
+      h2.tools-heading Tools we use
+
+      .tool.js
+      .tool.react
+      .tool.angular
+      .tool.docker
+
+      p.tool-description We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we'll use them.  We adapt to any environment, yet prefer current best practices wherever possible.
+
+    section#partners
+      h2.partners-heading Our partners
+      h3.partners-subheading We work with the best
+
+      p.partners-description We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.
+
+    section#business
+      h2.business-heading Business model
+
+      p.business-description We alternate between building, imagining, and creating software.  When we're contracted to do so, we're focused on the objectives of other companies.  When we're not working for other companies, we build apps that make the world a better place.
+
+    section#github
+      .github-counter 20
+      h2.github-header Open source projects
+
+      p.github-description We have several open source projects that we maintain and have published for the community.  Check them out on Github.
+
+      .github-carousel
+
+      a.github-link(href=)
+
+    section#contact
       .cell
         +contact-form()
       include ../scripts/ga.jade
+
+    section.footer

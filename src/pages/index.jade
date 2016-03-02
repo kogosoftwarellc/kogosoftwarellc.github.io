@@ -53,36 +53,40 @@ html
     section#tools
       h2.section-heading Tools we use
 
-      .tool-set
-        .tool-container
-          img(src="./images/nodejs.svg")
-        .tool-container
-          img(src="./images/react.svg")
-        .tool-container
-          img(src="./images/angular.svg")
-      .tool-set
-        .tool-container
-          img(src="./images/javascript.svg")
-        .tool-container
-          img(src="./images/docker.svg")
-        .tool-container
-          img(src="./images/git.svg")
+      .tool-container
+        .tool-set
+          .tool
+            img(src="./images/nodejs.svg")
+          .tool
+            img(src="./images/react.svg")
+          .tool
+            img(src="./images/angular.svg")
+        .tool-set
+          .tool
+            img(src="./images/javascript.svg")
+          .tool
+            img(src="./images/docker.svg")
+          .tool
+            img(src="./images/git.svg")
 
       p.section-description We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we'll use them.  We adapt to any environment, yet prefer current best practices wherever possible.
 
     section#partners.left-align
       img(src="./images/diamonds-2.svg")
-      h2.section-heading Our partners
-      h3.section-subheading We work with the best
+      .content
+        h2.section-heading Our partners
+        h3.section-subheading We work with the best
 
-      p.section-description We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.
+        p.section-description We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.
 
 
     section#business
-      .flair
-      h2.section-heading Business model
+      .flair-container
+        .flair
+      .content
+        h2.section-heading Business model
 
-      p.section-description We alternate between building, imagining, and creating software.  When we're contracted to do so, we're focused on the objectives of other companies.  When we're not working for other companies, we build apps that make the world a better place.
+        p.section-description We alternate between building, imagining, and creating software.  When we're contracted to do so, we're focused on the objectives of other companies.  When we're not working for other companies, we build apps that make the world a better place.
 
     section#github
       img(src="./images/Github-Large.svg")
@@ -101,6 +105,7 @@ html
         h2.section-heading Connect with us
       p.section-description If you're a recruiting agency and would like to connect, or if you're a ninja looking to join us: fill out our secure contact form and we'll reach out to you as soon as possible.
       .contact-form-container
+        .shadow-box
         +contact-form()
         include ../scripts/ga.jade
 

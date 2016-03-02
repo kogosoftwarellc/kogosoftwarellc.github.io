@@ -29,7 +29,28 @@
     }
   }
 
+  .section-description {
+    @media (min-width: @sm-min) {
+      width: 60%;
+      margin: auto;
+    }
+  }
+
   .contact-form-container {
+    position: relative;
+
+    .shadow-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: -2;
+      width: 50%;
+      height: 500px;
+      box-shadow: 0px 0px 123px -19px rgba(0,0,0,0.75);
+    }
 
     .contact-form {
       background-color: white;
@@ -37,6 +58,11 @@
       margin: auto;
       padding: 25px;
       text-align: left;
+
+      @media (min-width: @sm-min) {
+        width: 50%;
+        margin-top: 50px;
+      }
 
       .confirmation {
         display: none;

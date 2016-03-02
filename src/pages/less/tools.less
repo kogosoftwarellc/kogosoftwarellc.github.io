@@ -3,19 +3,34 @@
 #tools {
   text-align: center;
 
-  .tool-set {
-    display: block;
-    margin-top: 30px;
+  .tool-container {
+    width: 90%;
+    margin: auto;
 
-    .tool-container {
-      display: inline-block;
-      vertical-align: center;
-      width: 100px;
-    }
+    .tool-set {
+      display: block;
+      margin-top: 30px;
 
-    img {
-      display: inline;
-      height: 50px;
+      @media (min-width: @sm-min) {
+        display: inline-block;
+        margin-top: 40px;
+        width: 50%;
+      }
+
+      .tool {
+        display: inline-block;
+        vertical-align: center;
+        width: 100px;
+
+        @media (min-width: @sm-min) {
+          width: 33%;
+        }
+
+        img {
+          display: inline;
+          height: 50px;
+        }
+      }
     }
   }
 
@@ -23,5 +38,10 @@
     color: @secondary-text-color;
     margin-top: 30px;
     padding: 0 10px;
+
+    @media (min-width: @sm-min) {
+      margin: 40px auto 0 auto;
+      width: 500px;
+    }
   }
 }

@@ -15,62 +15,107 @@ html
   body
     section#header
       .logo
+        img(src="./images/gorilla@3x.png")
+        span.name Kogo
+        span.software software
 
       .brand
-        h1 We are 
-          span.name Kogo
+        .super We are
+        .name Kogo
           
         p.mission Kogo provides the technical resources you need, when you need them.  What that means is that we have programmers, consultants, architects, leaders, listeners, trainers, mentors, or anything inbetween, ready to help you in a moment's notice.
 
+      img(src="./images/menu_button.png" class="menu-button")
       .navigation
-        ol
-          li 
-            a(href="#header") Who we are
-          li 
-            a(href="#tools") Tools
-          li 
-            a(href="#partners") Partners
-          li 
-            a(href="#business") Business model
-          li 
-            a(href="#github") Open source projects
-          li 
-            a(href="#contact") Connect with us
+        .header
+          h3 Menu
+          img(src="./images/close_menu_button.png" class="close-button")
+
+        a(href="#header" class="nav-item")
+          .item-number 01
+          .item-name Who we are
+        a(href="#tools" class="nav-item") 
+          .item-number 02
+          .item-name Tools
+        a(href="#partners" class="nav-item") 
+          .item-number 03
+          .item-name Partners
+        a(href="#business" class="nav-item") 
+          .item-number 04
+          .item-name Business model
+        a(href="#github" class="nav-item") 
+          .item-number 05
+          .item-name Open source projects
+        a(href="#contact" class="nav-item") 
+          .item-number 06
+          .item-name Connect with us
 
     section#tools
-      h2.tools-heading Tools we use
+      h2.section-heading Tools we use
 
-      .tool.js
-      .tool.react
-      .tool.angular
-      .tool.docker
+      .tool-set
+        .tool-container
+          img(src="./images/nodejs.svg")
+        .tool-container
+          img(src="./images/react.svg")
+        .tool-container
+          img(src="./images/angular.svg")
+      .tool-set
+        .tool-container
+          img(src="./images/javascript.svg")
+        .tool-container
+          img(src="./images/docker.svg")
+        .tool-container
+          img(src="./images/git.svg")
 
-      p.tool-description We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we'll use them.  We adapt to any environment, yet prefer current best practices wherever possible.
+      p.section-description We use the latest open source technologies, but are not limited by them.  If you have existing technologies that cannot be replaced, we'll use them.  We adapt to any environment, yet prefer current best practices wherever possible.
 
-    section#partners
-      h2.partners-heading Our partners
-      h3.partners-subheading We work with the best
+    section#partners.left-align
+      img(src="./images/diamonds-2.svg")
+      h2.section-heading Our partners
+      h3.section-subheading We work with the best
 
-      p.partners-description We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.
+      p.section-description We partner with the best recruiting firms in the valley.  This allows us to stay technical and focus on developing software rather than getting bogged down communicating with dozens of HR departments.
+
 
     section#business
-      h2.business-heading Business model
+      .flair
+      h2.section-heading Business model
 
-      p.business-description We alternate between building, imagining, and creating software.  When we're contracted to do so, we're focused on the objectives of other companies.  When we're not working for other companies, we build apps that make the world a better place.
+      p.section-description We alternate between building, imagining, and creating software.  When we're contracted to do so, we're focused on the objectives of other companies.  When we're not working for other companies, we build apps that make the world a better place.
 
     section#github
+      img(src="./images/Github-Large.svg")
       .github-counter 20
-      h2.github-header Open source projects
+      h2.section-heading Open source projects
 
-      p.github-description We have several open source projects that we maintain and have published for the community.  Check them out on Github.
+      p.section-description We have several open source projects that we maintain and have published for the community.  Check them out on Github.
 
       .github-carousel
 
-      a.github-link(href=)
+      button View all on Github
 
     section#contact
-      .cell
+      img(src="./images/diamonds-3.svg")
+      .heading-container
+        h2.section-heading Connect with us
+      p.section-description If you're a recruiting agency and would like to connect, or if you're a ninja looking to join us: fill out our secure contact form and we'll reach out to you as soon as possible.
+      .contact-form-container
         +contact-form()
-      include ../scripts/ga.jade
+        include ../scripts/ga.jade
 
-    section.footer
+    section#footer
+      .social
+        .social-icon.github
+        .social-icon.linkedin
+
+      p.address Kogo Software, LLC  PO Box 30224
+        br 
+        |Phoenix, AZ 85046
+
+      .copyright
+        img(src="./images/gorilla@3x.png") 
+        p Copyright &copy; 2016.  All Rights Reserved.
+
+    script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+    script(src="./index.js")

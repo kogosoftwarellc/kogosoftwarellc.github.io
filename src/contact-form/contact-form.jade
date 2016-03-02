@@ -1,28 +1,21 @@
 mixin contact-form
-  .card.medium.contact-form
-    .content
-      h2 Getting in touch
-      p If you're a recruiting agency and would like to connect, or if you're a ninja looking to join us: fill out our secure contact form
-       | and we'll reach out to you as soon as possible.
-      form(
-        action="https://docs.google.com/a/kogosoftwarellc.com/forms/d/135v56r34612R2BTeVGPrQaxFQOquE5AwMtAPfPRF9Ng"
-        onsubmit="return submitGoogleForm(this);")
-          label Name
-          input(name="entry.1703994313")
-          label Company
-          input(name="entry.1009702695")
-          label Phone
-          input(name="entry.1091083558")
-          label Email
-          input(name="entry.1690433273")
-          label Message
-          textarea(name="entry.1975702889")
-          br
-          button(class="go" type="submit")='Submit'
+  .contact-form
+    form(
+      action="https://docs.google.com/a/kogosoftwarellc.com/forms/d/135v56r34612R2BTeVGPrQaxFQOquE5AwMtAPfPRF9Ng"
+      onsubmit="return submitGoogleForm(this);")
+        label Name
+        input(name="entry.1703994313")
+        label Company
+        input(name="entry.1009702695")
+        label Phone
+        input(name="entry.1091083558")
+        label Email
+        input(name="entry.1690433273")
+        label Message
+        textarea(name="entry.1975702889")
+        br
+        button(type="submit")='Send'
 
-      .confirmation.content
-        | Thanks for reaching out!  We'll likely get back to you in the next 24 hours.
-
-    script
-      include ../../node_modules/google-form/google-form.js
+  script
+    include ../../node_modules/google-form/google-form.js
 

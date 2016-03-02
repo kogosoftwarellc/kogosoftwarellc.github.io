@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="750px" height="250px" viewBox="0 0 750 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>diamonds-4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing-Page" sketch:type="MSArtboardGroup" transform="translate(-425.000000, -5103.000000)" fill="#C6C6F8">
+            <g id="Footer" sketch:type="MSLayerGroup" transform="translate(100.000000, 5103.000000)">
+                <g id="diamonds-4" transform="translate(190.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M0,340 L510,0 L1020,340 L0,340 Z" id="Polygon-1" opacity="0.1"></path>
+                    <path d="M0,380 L510,40 L1020,380 L0,380 Z" id="Polygon-1" opacity="0.2"></path>
+                    <path d="M0,470 L510,130 L1020,470 L0,470 Z" id="Polygon-1" opacity="0.4"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

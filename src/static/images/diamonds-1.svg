@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="226px" viewBox="0 0 300 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>diamonds-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-5" sketch:type="MSArtboardGroup" transform="translate(-10.000000, -98.000000)" fill="#C1C1FF">
+            <g id="Section-1" sketch:type="MSLayerGroup">
+                <g id="diamonds-1" transform="translate(10.000000, 98.000000)" sketch:type="MSShapeGroup">
+                    <path d="M103.125,47.0833333 L93.75,37.6666667 L18.75,113 L93.75,188.333333 L103.125,178.916667 L37.5,113 L103.125,47.0833333 Z" id="left" opacity="0.2"></path>
+                    <path d="M196.875,178.916667 L206.25,188.333333 L281.25,113 L206.25,37.6666667 L196.875,47.0833333 L262.5,113 L196.875,178.916667 Z" id="right" opacity="0.2"></path>
+                    <path d="M234.375,160.083333 L243.75,169.5 L300,113 L243.75,56.5 L234.375,65.9166667 L281.25,113 L234.375,160.083333 Z" id="right" opacity="0.1"></path>
+                    <path d="M65.625,65.9166667 L56.25,56.5 L0,113 L56.25,169.5 L65.625,160.083333 L18.75,113 L65.625,65.9166667 Z" id="right" opacity="0.1"></path>
+                    <polygon id="middle" opacity="0.4" points="150 0 262.5 113 150 226 37.5 113 "></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -4,17 +4,28 @@
   background: url('./images/Computers-Filtered-scaled.png');
   background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
   height: 230px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
   text-align: center;
   z-index: -1;
 
-  @media (min-width: @sm-min) {
-    .content {
+  @media (min-width: @lg-min) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .content {
+    @media (min-width: @sm-min) {
       padding-top: 20px;
+      padding-left: 15%;
       width: 50%;
       margin: auto;
+
+      @media (min-width: @lg-min) {
+        width: 60%;
+      }
     }
   }
 
@@ -22,7 +33,13 @@
     left: 0;
     opacity: .8;
     position: absolute;
-    top: 0;
+    top: -20%;
+    height: 140%;
+
+    @media (min-width: @lg-min) {
+      top: -30%;
+      height: 160%;
+    }
   }
 
   .section-heading {
@@ -33,9 +50,20 @@
   .section-subheading {
     padding-bottom: 10px;
     text-align: left;
+
+    @media (min-width: @lg-min) {
+      padding-top: 5px;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
   }
 
   .section-description {
     text-align: left;
+
+    @media (min-width: @lg-min) {
+      font-size: 18px;
+      line-height: 2;
+    }
   }
 }

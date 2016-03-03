@@ -1,20 +1,37 @@
 @import "constants";
 
 #github {
+  background: url("./images/diamonds-3.svg");
+  background-repeat: no-repeat;
+  background-position: right 400px;
+  background-size: 50%;
   position: relative;
   text-align: center;
+
+  @media (min-width: @lg-min) {
+    padding-bottom: 150px;
+  }
 
   img {
     left: 0;
     opacity: .1;
     position: absolute;
     top: 0;
+
+    @media (min-width: @lg-min) {
+      height: 90%;
+      top: -70px;
+    }
   }
 
   .github-counter {
     font-size: 50px;
     font-weight: 900;
     text-align: center;
+
+    @media (min-width: @lg-min) {
+      font-size: 80;
+    }
   }
 
   .section-heading {
@@ -22,6 +39,10 @@
 
     @media (min-width: @sm-min) {
       margin-top: 20px;
+    }
+
+    @media (min-width: @lg-min) {
+      margin-top: 40px;
     }
   }
 
@@ -32,6 +53,12 @@
       margin: auto;
       margin-top: 20px;
       width: 60%;
+
+      @media (min-width: @lg-min) {
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: 2;
+      }
     }
   }
 

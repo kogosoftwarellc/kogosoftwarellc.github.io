@@ -12,6 +12,22 @@
   padding: 0;
   width: 100%;
 
+  .overlay.inactive {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .overlay.active {
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1 !important;
+    background-color: black;
+    opacity: .75;
+  }
+
   .brand {
     background-image: url("./images/diamonds-1.svg");
     background-position: center center;
@@ -28,11 +44,21 @@
       width: 500px;
     }
 
+    @media (min-width: @lg-min) {
+      background-size: 600px;
+      height: 700px;
+      width: 750px;
+    }
+
     .super {
       color: @secondary-text-color;
       font-weight: 500;
       padding-top: 35px;
       text-transform: uppercase;
+
+      @media (min-width: @lg-min) {
+        font-size: 32px;
+      }
     }
 
     .name {
@@ -41,6 +67,10 @@
       font-weight: 900;
       margin-top: -10px;
       text-transform: none;
+
+      @media (min-width: @lg-min) {
+        font-size: 120px;
+      }
     }
 
     .mission {
@@ -49,6 +79,11 @@
       line-height: 1.4;
       margin-top: 5px;
       padding: 0 10px;
+
+      @media (min-width: @lg-min) {
+        font-size: 18px;
+        line-height: 2;
+      }
     }
   }
 
@@ -70,6 +105,10 @@
         height: 355px;
         transition-duration: 1s;
         transition-property: height;
+      }
+
+      .overlay.active {
+        height: 100%;
       }
 
       .header {
@@ -127,6 +166,11 @@
       padding-right: 50px;
       padding-top: 50px;
 
+      @media (min-width: @lg-min) {
+        padding-right: 100px;
+        padding-top: 100px;
+      }
+
       .close-button {
         display: none;
       }
@@ -144,10 +188,26 @@
         text-decoration: none;
         padding-bottom: 20px;
 
+        @media (min-width: @md-min) {
+          padding-bottom: 30px;
+        }
+
+        @media (min-width: @lg-min) {
+          padding-bottom: 50px;
+        }
+
         .item-number {
           display: inline;
           color: @accent-color;
           font-size: 8px;
+
+          @media (min-width: @md-min) {
+            font-size: 16px;
+          }
+
+          @media (min-width: @lg-min) {
+            font-size: 18px;
+          }
         }
 
         .item-name {
@@ -156,6 +216,14 @@
           text-transform: uppercase;
           font-size: 8px;
           margin-left: 5px;
+
+          @media (min-width: @md-min) {
+            font-size: 16px;
+          }
+
+          @media (min-width: @lg-min) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -179,11 +247,19 @@
       top: 50px;
     }
 
+    @media (min-width: @lg-min) {
+      left: 100px;
+    }
+
     img {
       width: 40px;
 
       @media (min-width: @sm-min) {
         width: 60px;
+      }
+
+      @media (min-width: @lg-min) {
+        width: 100px;
       }
     }
 
@@ -200,6 +276,12 @@
         left: 70px;
         font-size: 24px;
       }
+
+      @media (min-width: @lg-min) {
+        font-size: 40px;
+        left: 120px;
+        top: 30px;
+      }
     }
 
     .software {
@@ -209,11 +291,18 @@
       position: absolute;
       text-transform: uppercase;
       top: 30px;
+      letter-spacing: 1px;
 
       @media (min-width: @sm-min) {
         top: 45px;
         left: 115px;
         font-size: 10px;
+      }
+
+      @media (min-width: @lg-min) {
+        top: 70px;
+        left: 190px;
+        font-size: 16px;
       }
     }
   }

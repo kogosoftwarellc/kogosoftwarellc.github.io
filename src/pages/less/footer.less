@@ -36,26 +36,40 @@
     }
 
     .github {
-      width: 30px;
-      height: 30px;
       display: inline-block;
       position: relative;
       left: -60px;
+      width: 30px;
+      height: 30px;
+      background-image: url('./images/github@3x.png');
+      background-size: contain;
+      background-repeat: no-repeat;
 
       @media (min-width: @lg-min) {
         left: -30px;
       }
+
+      &:hover {
+        background-image: url('./images/github_hover@3x.png');
+      }
     }
 
     .linkedin {
-      width: 30px;
-      height: 30px;
       display: inline-block;
       position: relative;
       left: 60px;
+      width: 30px;
+      height: 30px;
+      background-image: url('./images/linkedin@3x.png');
+      background-size: contain;
+      background-repeat: no-repeat;
 
       @media (min-width: @lg-min) {
         left: 30px;
+      }
+
+      &:hover {
+        background-image: url('./images/linkedin_hover@3x.png');
       }
     }
   }

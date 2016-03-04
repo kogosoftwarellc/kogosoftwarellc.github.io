@@ -1,50 +1,112 @@
 @import "constants";
 
 #footer {
-  width: 85%;
   margin: auto;
+  width: 85%;
   text-align: center;
   border-top: 1px solid @secondary-brand-color;
   position: relative;
   padding-bottom: 100px;
-  background: url('./images/diamonds-4.svg');
-  background-repeat: no-repeat;
-  background-position: center 100px;
+
+  .diamond-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-left: -10px;
+
+    img {
+      position: relative;
+      left: 100%;
+      margin-left: -200%;
+      top: 5px;
+    }
+  }
 
   .social {
+    @media (min-width: @lg-min) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      padding-top: 20px;
+      z-index: 1;
+    }
+
     .github {
-      background: url('./images/github@3x.png');
       width: 30px;
       height: 30px;
-      background-size: 100%;
-      background-repeat: no-repeat;
       display: inline-block;
       position: relative;
       left: -60px;
+
+      @media (min-width: @lg-min) {
+        left: -30px;
+      }
     }
 
     .linkedin {
-      background: url('./images/linkedin@3x.png');
       width: 30px;
       height: 30px;
-      background-size: 100%;
-      background-repeat: no-repeat;
       display: inline-block;
       position: relative;
       left: 60px;
+
+      @media (min-width: @lg-min) {
+        left: 30px;
+      }
     }
   }
 
-  p {
+  .address {
     color: @primary-text-color;
-    line-height: 20px;
     font-weight: 700;
+    line-height: 20px;
     margin: 40px 0;
+
+    @media (min-width: @lg-min) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 30px;
+      padding-top: 20px;
+    }
+
+    .line-one {
+      display: block;
+
+      @media (min-width: @lg-min) {
+        display: inline;
+        margin-right: 15px;
+      }
+    }
+
+    .line-two {
+
+    }
   }
 
   .copyright {
-    font-size: 12px;
     color: @primary-text-color;
+
+    @media (min-width: @lg-min) {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      p {
+        position: relative;
+        font-size: 12px;
+        font-weight: 900;
+        z-index: 2;
+
+        @media (min-width: @lg-min) {
+          font-size: 16px;
+        }
+      }
+    }
 
     img {
       display: inline-block;
@@ -52,22 +114,17 @@
       position: relative;
       top: 13px;
       right: 10px;
+      z-index: 2;
+
+      @media (min-width: @lg-min) {
+        width: 70px;
+        top: 30px;
+      }
     }
 
     p {
       display: inline;
       padding-bottom: 40px;
-    }
-  }
-
-  .diamond {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-
-    img {
-      position: relative;
-      left: -50%;
     }
   }
 }

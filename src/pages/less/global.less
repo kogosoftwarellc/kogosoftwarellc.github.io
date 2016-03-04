@@ -19,8 +19,8 @@ h3 {
 }
 
 p {
-  letter-spacing: 1px;
   font-size: 13px;
+  line-height: 2;
 }
 
 section.left-align {
@@ -41,6 +41,11 @@ button {
   letter-spacing: 2px;
   padding: 10px 25px;
   text-transform: uppercase;
+
+  @media (min-width: @lg-min) {
+    font-size: 22px;
+    padding: 25px 35px;
+  }
 }
 
 .section-heading {
@@ -48,6 +53,11 @@ button {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  @media (min-width: @lg-min) {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
 }
 
 .section-subheading {
@@ -59,5 +69,6 @@ button {
 
 .section-description {
   color: white;
-  line-height: 20px;
+  line-height: 1.5;
+  font-weight: 700;
 }

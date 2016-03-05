@@ -14,12 +14,16 @@
     position: absolute;
     top: 0;
     width: 100%;
-    background: url('./images/Person-Sitting-cropped.jpg');
+    background-image: url('./images/person-sitting-small.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
     margin-left: -10px;
+
+    @media (min-width: @md-min) {
+      background-image: url('./images/person-sitting-large.jpg');
+    }
   }
 
   @media (min-width: @lg-min) {

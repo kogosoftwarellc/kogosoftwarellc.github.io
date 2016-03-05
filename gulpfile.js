@@ -11,6 +11,7 @@ var reload = browserSync.reload;
 var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 
 var SRC_DIR = path.resolve(__dirname, 'src');
 var PATHS = {
@@ -52,6 +53,7 @@ gulp.task('build:scripts', function() {
 
 gulp.task('build:static', function() {
   return gulp.src(PATHS.static + '/**/*')
+    .pipe(imagemin({ optimizationLevel: 2, progressive: true, interlaced: true }))
     .pipe(gulp.dest(PATHS.dist));
 });
 

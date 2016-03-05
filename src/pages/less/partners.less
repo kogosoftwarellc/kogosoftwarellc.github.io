@@ -1,15 +1,20 @@
 @import "constants";
 
 #partners {
-  background: url('./images/Computers-Filtered-scaled.png');
   background-attachment: fixed;
-  background-size: cover;
+  background-image: url('./images/computers-small.jpg');
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 230px;
   padding-bottom: 30px;
   position: relative;
   text-align: center;
   z-index: -1;
+
+  @media (min-width: @md-min) {
+    background-image: url('./images/computers-large.jpg');
+  }
 
   @media (min-width: @lg-min) {
     padding-top: 200px;

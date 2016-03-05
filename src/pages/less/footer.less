@@ -2,17 +2,42 @@
 
 #footer {
   margin: auto;
-  width: 85%;
+  width: 100%;
   text-align: center;
-  border-top: 1px solid @secondary-brand-color;
   position: relative;
-  padding-bottom: 100px;
+  height: 320px;
+  box-sizing: border-box;
+  padding-top: 0px;
+
+  hr {
+    width: 90%;
+    color: @primary-brand-color;
+
+    @media (max-width: @md-max) {
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: @lg-min) {
+      position: relative;
+      top: 50px;
+    }
+  }
+
+  @media (min-width: @sm-min) {
+    height: 330px;
+  }
+
+  @media (min-width: @lg-min) {
+    height: 200px;
+  }
 
   .diamond-container {
     position: absolute;
     bottom: 0;
     width: 100%;
     margin-left: -10px;
+    overflow: hidden;
+    z-index: -2;
 
     img {
       position: relative;
@@ -25,7 +50,7 @@
   .social {
     @media (min-width: @lg-min) {
       position: absolute;
-      top: 0;
+      top: 60px;
       left: 0;
       right: 0;
       margin-left: auto;
@@ -82,8 +107,8 @@
 
     @media (min-width: @lg-min) {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 60px;
+      right: 100px;
       margin-top: 30px;
       padding-top: 20px;
     }
@@ -104,17 +129,18 @@
 
   .copyright {
     color: @primary-text-color;
+    z-index: 2;
+    font-weight: 700;
 
     @media (min-width: @lg-min) {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 100px;
+      top: 60px;
 
       p {
         position: relative;
         font-size: 12px;
         font-weight: 900;
-        z-index: 2;
 
         @media (min-width: @lg-min) {
           font-size: 16px;

@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".menu-button").click(function(a){$(".navigation").toggleClass("opened"),$(".overlay").toggleClass("active"),a.stopPropagation()}),$("html").click(function(){$(".navigation").removeClass("opened"),$(".overlay").removeClass("active").addClass("inactive")})});

@@ -1,5 +1,6 @@
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
+var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var cssimport = require('gulp-cssimport');
 var del = require('del');
@@ -33,6 +34,7 @@ gulp.task('build:less', function() {
     .pipe(autoprefixer())
     .pipe(cssimport())
     .pipe(concat('index.css'))
+    .pipe(cleancss())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(PATHS.dist))
     .pipe(browserSync.stream());
@@ -74,7 +76,8 @@ gulp.task('serve', ['clean', 'default'], function() {
 
 gulp.task('default', function(cb) {
   runSequence(
-    'build:less',
-    ['build:pages', 'build:static', 'build:scripts'],
+    'clean',
+    ['build:less', 'build:scripts'],
+    ['build:pages', 'build:static'],
     cb);
 });

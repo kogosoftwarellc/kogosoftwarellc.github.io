@@ -10,9 +10,10 @@ html
     title Kogo Software LLC
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name='theme-color' content='#65727B')
-    link(href='/index.css' rel='stylesheet' type='text/css')
+    style
+      include ../../dist/index.css
   body
-    section#header
+    section#header(post-rendered-height)
       .overlay.inactive
       .logo
         img(src="./images/gorilla@3x.png" alt="Kogo Software Logo")
@@ -137,4 +138,7 @@ html
         img(src="./images/diamonds-4.svg")
 
     script(src="https://code.jquery.com/jquery-2.2.1.min.js")
-    script(src="./index.js")
+    script
+      include ../../dist/index.js
+      include ../../node_modules/post-rendered-height/post-rendered-height.js
+      | PostRenderedHeight.init();

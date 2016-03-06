@@ -3,13 +3,18 @@
 #github {
   background: url("./images/diamonds-3.svg");
   background-repeat: no-repeat;
-  background-position: right 400px;
+  background-position: right 480px;
   background-size: 50%;
   position: relative;
   text-align: center;
+  padding-bottom: 80px;
 
   @media (min-width: @lg-min) {
     padding-bottom: 150px;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   img {
@@ -25,17 +30,21 @@
   }
 
   .github-counter {
+    font-family: "Roboto", sans-serif;
     font-size: 50px;
     font-weight: 900;
     text-align: center;
+    letter-spacing: 0;
 
     @media (min-width: @lg-min) {
-      font-size: 80;
+      font-size: 100px;
+      margin-top: 100px;
     }
   }
 
   .section-heading {
     text-align: center;
+    margin-top: 20px;
 
     @media (min-width: @sm-min) {
       margin-top: 20px;
@@ -47,7 +56,8 @@
   }
 
   .section-description {
-    color: @primary-text-color;
+    color: @secondary-text-color;
+    margin-top: 20px;
 
     @media (min-width: @sm-min) {
       margin: auto;
@@ -56,13 +66,15 @@
 
       @media (min-width: @lg-min) {
         margin-top: 40px;
-        font-size: 18px;
-        line-height: 2;
       }
     }
   }
 
   .github-carousel {
     height: 200px;
+
+    @media (min-width: @lg-min) {
+      height: 300px;
+    }
   }
 }

@@ -49,50 +49,59 @@
     }
 
     @media (min-width: @lg-min) {
-      background-size: 600px;
-      height: 700px;
-      width: 750px;
+      background-size: contain;
+      width: 800px;
     }
 
     .super {
       color: @secondary-text-color;
-      font-weight: 500;
-      padding-top: 35px;
+      font-family: "FuturaMedium";
+      letter-spacing: 1.2px;
+      padding-top: 45px;
       text-transform: uppercase;
 
       @media (min-width: @lg-min) {
-        font-size: 32px;
+        font-size: 30px;
+        letter-spacing: 6px;
       }
     }
 
     .name {
       color: white;
-      font-size: 80px;
-      font-weight: 900;
-      margin-top: -10px;
+      font-family: "RobotoBlack", sans-serif;
+      font-size: 75px;
+      letter-spacing: 0px;
+      line-height: 90px;
       text-transform: none;
+      margin-top: -18px;
 
       @media (min-width: @lg-min) {
-        font-size: 120px;
+        font-size: 150px;
+        margin: 15px 0 60px;
       }
     }
 
     .mission {
       color: white;
-      font-size: 13px;
-      line-height: 1.4;
-      margin-top: 5px;
-      padding: 0 10px;
+      font-family: "FuturaMedium";
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      margin-top: 2px;
+      padding: 0 10px 25px 10px;
 
       @media (min-width: @lg-min) {
-        font-size: 18px;
-        line-height: 2;
+        font-size: 22px;
+        line-height: 36px;
+        padding-bottom: 0px;
       }
     }
   }
 
   @media (max-width: @xs-max) {
     .navigation {
+      font-family: "FuturaMedium", sans-serif;
+      letter-spacing: 1px;
       background-color: white;
       font-size: 12px;
       height: 0;
@@ -122,7 +131,7 @@
         h3 {
           color: @accent-color;
           display: inline;
-          font-family: "Roboto";
+          font-family: "FuturaMedium";
           font-size: 15px;
           text-align: center;
           text-transform: uppercase;
@@ -199,6 +208,7 @@
       .nav-item {
         display: block;
         height: 20px;
+        font-family: "FuturaMedium", sans-serif;
         text-align: right;
         text-decoration: none;
         padding-bottom: 20px;
@@ -284,6 +294,7 @@
     }
 
     .name {
+      font-family: "RobotoBlack", sans-serif;
       color: @primary-text-color;
       font-size: 20px;
       font-weight: 900;

@@ -101,11 +101,12 @@
 
   .address {
     color: @primary-text-color;
-    font-weight: 700;
+    font-family: "FuturaMedium";
     line-height: 20px;
     margin: 40px 0;
 
     @media (min-width: @lg-min) {
+      font-size: 18px;
       position: absolute;
       top: 60px;
       right: 100px;
@@ -121,16 +122,12 @@
         margin-right: 15px;
       }
     }
-
-    .line-two {
-
-    }
   }
 
   .copyright {
     color: @primary-text-color;
     z-index: 2;
-    font-weight: 700;
+    font-family: "FuturaMedium", sans-serif;
 
     @media (min-width: @lg-min) {
       position: absolute;
@@ -140,10 +137,9 @@
       p {
         position: relative;
         font-size: 12px;
-        font-weight: 900;
 
         @media (min-width: @lg-min) {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
     }

@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "gulp-clean-css": "^2.0.3",
-    "post-rendered-height": "^1.0.2"
+    "post-rendered-height": "^1.0.3"
   }
 }

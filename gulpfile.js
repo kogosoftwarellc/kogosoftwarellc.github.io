@@ -65,6 +65,8 @@ gulp.task('serve', ['clean', 'default'], function() {
   gulp.watch(PATHS.src + '/**/*.jpg', ['build:static']);
   gulp.watch(PATHS.src + '/**/*.png', ['build:static']);
   gulp.watch(PATHS.src + '/**/*.svg', ['build:static']);
+  gulp.watch(PATHS.src + '/**/*.otf', ['build:static']);
+  gulp.watch(PATHS.src + '/**/*.ttf', ['build:static']);
   gulp.watch(PATHS.src + '/**/*.js', ['build:scripts']);
 
   browserSync.init({server: PATHS.dist});

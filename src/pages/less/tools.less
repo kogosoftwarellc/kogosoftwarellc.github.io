@@ -5,6 +5,16 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @media (min-width: @sm-min) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @lg-min) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   @media (max-width: @xs-max) {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -45,7 +55,7 @@
   }
 
   p {
-    color: @secondary-text-color;
+    color: @quaternary-text-color;
     margin-top: 30px;
     padding: 0 10px;
 
@@ -56,8 +66,6 @@
 
     @media (min-width: @lg-min) {
       width: 66%;
-      font-size: 18px;
-      line-height: 2;
     }
   }
 }

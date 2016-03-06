@@ -31,7 +31,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-54605272-2', 'auto');
-ga('send', 'pageview');</script></div></section><section id="footer"><hr><div class="social"><a href="https://www.linkedin.com/company/kogo-software-llc"><div class="github"></div></a><a href="https://github.com/kogosoftwarellc"><div class="linkedin"></div></a></div><div class="address"><span class="line-one">Kogo Software, LLC  &nbsp; PO Box 30224</span><span class="line-two">Phoenix, AZ 85046</span></div><div class="copyright"><img src="./images/gorilla@3x.png" alt="Kogo Software Logo"><p>Copyright &copy; 2016.  All Rights Reserved.</p></div><div class="diamond-container"><img src="./images/diamonds-4.svg"></div></section><script src="https://code.jquery.com/jquery-2.2.1.min.js"></script><script>$(document).ready(function(){$(".menu-button").click(function(a){$(".navigation").toggleClass("opened"),$(".overlay").toggleClass("active"),a.stopPropagation()}),$("html").click(function(){$(".navigation").removeClass("opened"),$(".overlay").removeClass("active").addClass("inactive")})});(function(window) {
+ga('send', 'pageview');</script></div></section><section id="footer"><hr><div class="social"><a href="https://github.com/kogosoftwarellc"><div class="github"></div></a><a href="https://www.linkedin.com/company/kogo-software-llc"><div class="linkedin"></div></a></div><div class="address"><span class="line-one">Kogo Software, LLC  &nbsp; PO Box 30224</span><span class="line-two">Phoenix, AZ 85046</span></div><div class="copyright"><img src="./images/gorilla@3x.png" alt="Kogo Software Logo"><p>Copyright &copy; 2016.  All Rights Reserved.</p></div><div class="diamond-container"><img src="./images/diamonds-4.svg"></div></section><script src="https://code.jquery.com/jquery-2.2.1.min.js"></script><script>$(document).ready(function(){$(".menu-button").click(function(a){$(".navigation").toggleClass("opened"),$(".overlay").toggleClass("active"),a.stopPropagation()}),$("html").click(function(){$(".navigation").removeClass("opened"),$(".overlay").removeClass("active").addClass("inactive")})});(function(window) {
   window.PostRenderedHeight = {
     applyHeight: applyHeight,
     init: init
@@ -57,12 +57,18 @@ ga('send', 'pageview');</script></div></section><section id="footer"><hr><div cl
     all().forEach(applyHeight);
   }
 
+  var timeout;
   window.addEventListener('orientationchange', function() {
     var els = all();
     els.forEach(removeHeight);
-    setTimeout(function() {
+
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(function() {
       els.forEach(applyHeight);
-    }, 10);
+    }, 2000);
   });
 }(typeof window !== 'undefined' ? window : {}));
 PostRenderedHeight.init();</script></body></html>

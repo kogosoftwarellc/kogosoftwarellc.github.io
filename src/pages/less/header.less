@@ -12,6 +12,10 @@
   padding: 0;
   width: 100%;
 
+  @media (min-width: @sm-min) {
+    min-height: 700px;
+  }
+
   @media (min-width: @md-min) {
     background-image: url("./images/mountains-large.jpg");
   }
@@ -37,30 +41,21 @@
     background-position: center center;
     background-repeat: no-repeat;
     display: table-cell;
-    height:400px;
     text-align: center;
     vertical-align: middle;
-    width:320px;
-
-    @media (min-width: @sm-min) {
-      background-size: 400px;
-      height: 500px;
-      width: 500px;
-    }
-
-    @media (min-width: @lg-min) {
-      background-size: contain;
-      width: 800px;
-    }
+    width:800px;
+    background-size: contain;
+    padding: 15px;
 
     .super {
       color: @secondary-text-color;
       font-family: "FuturaMedium";
-      letter-spacing: 1.2px;
       padding-top: 45px;
       text-transform: uppercase;
+      font-size: 22px;
+      letter-spacing: 6px;
 
-      @media (min-width: @lg-min) {
+      @media (min-width: @sm-min) {
         font-size: 30px;
         letter-spacing: 6px;
       }
@@ -69,13 +64,13 @@
     .name {
       color: white;
       font-family: "RobotoBlack", sans-serif;
-      font-size: 75px;
+      font-size: 100px;
       letter-spacing: 0px;
       line-height: 90px;
       text-transform: none;
-      margin-top: -18px;
+      margin-top: -10px;
 
-      @media (min-width: @lg-min) {
+      @media (min-width: @sm-min) {
         font-size: 150px;
         margin: 15px 0 60px;
       }
@@ -84,21 +79,22 @@
     .mission {
       color: white;
       font-family: "FuturaMedium";
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 0;
-      margin-top: 2px;
-      padding: 0 10px 25px 10px;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 1px;
+      margin-top: 6px;
+      padding-top: 15px;
 
-      @media (min-width: @lg-min) {
+      @media (min-width: @sm-min) {
         font-size: 22px;
         line-height: 36px;
         padding-bottom: 0px;
+        padding-top: 4px;
       }
     }
   }
 
-  @media (max-width: @xs-max) {
+  @media (max-width: @sm-max) {
     .navigation {
       font-family: "FuturaMedium", sans-serif;
       letter-spacing: 1px;
@@ -178,7 +174,7 @@
     }
   }
 
-  @media (min-width: @sm-min) {
+  @media (min-width: @md-min) {
     .menu-button {
       display: none;
     }
@@ -213,7 +209,7 @@
         text-decoration: none;
         padding-bottom: 20px;
 
-        @media (min-width: @md-min) {
+        @media (min-width: @sm-min) {
           padding-bottom: 30px;
         }
 
@@ -224,13 +220,13 @@
         .item-number {
           display: inline;
           color: @accent-color;
-          font-size: 8px;
+          font-size: 14px;
 
-          @media (min-width: @md-min) {
+/*          @media (min-width: @sm-min) {
             font-size: 16px;
-          }
+          }*/
 
-          @media (min-width: @lg-min) {
+          @media (min-width: @sm-min) {
             font-size: 18px;
           }
         }
@@ -239,10 +235,10 @@
           display: inline;
           color: white;
           text-transform: uppercase;
-          font-size: 8px;
+          font-size: 14px;
           margin-left: 5px;
 
-          @media (min-width: @md-min) {
+          @media (min-width: @sm-min) {
             font-size: 16px;
           }
 
@@ -264,6 +260,12 @@
     right: 20px;
     top: 20px;
     width: 20px;
+
+    @media (min-width: @sm-min) {
+      top: 60px;
+      right: 60px;
+      width: 30px;
+    }
   }
 
   .logo {

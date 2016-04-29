@@ -5,8 +5,8 @@ mixin contact-form
       onsubmit="return submitGoogleForm(this);")
         input(name="entry.1703994313" required placeholder="First Name")
         input(name="entry.1009702695" placeholder="Company")
-        input(name="entry.1091083558" placeholder="Phone")
-        input(name="entry.1690433273" required placeholder="Email")
+        input(name="entry.1091083558" type="tel" placeholder="Phone")
+        input(name="entry.1690433273" type="email" required placeholder="Email")
         input(name="entry.1975702889" required placeholder="Message")
         .asterisk This info is super important
         button(type="submit")='Send'

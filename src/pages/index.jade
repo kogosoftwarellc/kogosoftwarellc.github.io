@@ -6,12 +6,21 @@ doctype html
   All other content on this website is held in copyright by Kogo Software LLC.
 html
   head
-    meta(charset="utf-8")
     title Kogo Software LLC
+
+    meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name='theme-color' content='#65727B')
+    meta(property='og:url' content="http://www.kogo.io")
+    meta(property='og:type' content="website")
+    meta(property='og:title' content="Kogo Software LLC")
+    meta(property='og:site_name' content="Kogo Software LLC")
+    meta(property='og:image' content="https://kogo.io/images/gorilla@3x.png")
+    meta(property='og:description' content="Kogo provides the technical resources you need, when you need them.")
+
     style
       include ../../dist/index.css
+
   body
     section#header(post-rendered-height)
       .overlay.inactive

@@ -18,6 +18,9 @@ html
     meta(property='og:image' content="https://kogo.io/images/gorilla@3x.png")
     meta(property='og:description' content="Kogo provides the technical resources you need, when you need them.")
 
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
+
     style
       include ../../dist/index.css
 
@@ -105,13 +108,14 @@ html
         p.section-description We alternate between building, imagining, and creating software.  When we're contracted to do so, we're focused on the objectives of other companies.  When we're not working for other companies, we build apps that make the world a better place.
 
     section#github
-      img(src="./images/Github-Large.svg" alt="Github Logo")
-      .github-counter 20
+      img(class="github-logo" src="./images/Github-Large.svg" alt="Github Logo")
+      .github-counter
       h2.section-heading Open source projects
 
       p.section-description We have several open source projects that we maintain and have published for the community.  Check them out on Github.
 
-      .github-carousel
+      .github-carousel-container
+        .github-carousel
 
       a(href="https://github.com/kogosoftwarellc")
         button View all on Github
@@ -147,6 +151,7 @@ html
         img(src="./images/diamonds-4.svg")
 
     script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+    script(src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
     script
       include ../../dist/index.js
       include ../../node_modules/post-rendered-height/post-rendered-height.js

@@ -85,7 +85,7 @@
   }
 
   .carousel-item {
-    height: 200px;
+    min-height: 150px;
     width: 80%;
     margin: auto;
     border: 1px solid;
@@ -94,6 +94,19 @@
     text-align: left;
     position: relative;
     overflow: hidden;
+
+    .carousel-item__star {
+      float: right;
+
+      img {
+        display: inline;
+        margin-right: 5px;
+      }
+
+      img, span {
+        vertical-align: middle;
+      }
+    }
 
     .carousel-item__title {
       color: @primary-text-color;

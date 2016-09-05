@@ -27,13 +27,14 @@ $(document).ready(function() {
         carouselBase.append($('<div>').html(
           '<div class="carousel-item-container">' +
           '  <div class="carousel-item">' +
-          '    <p class="carousel-item__title">' + result.name +
+          '    <div>' +
+          '      <p class="carousel-item__title">' + result.name + '</p>' +
           '      <span class="carousel-item__star">' +
           // no space between elements to avoid line breaks
-          '<img src="./images/star.png" height="25px" width="auto">' +
+          '<svg aria-label="stars" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>' +
           '<span>' + result.stargazers_count + '</span>' +
           '</span>' +
-          '      </p>' +
+          '    </div>' +
           '    <p class="carousel-item__description">' + result.description + '</p>' +
           '    <a class="carousel-item__link" href="' + result.html_url  + '">View on Github</a>' +
           '  </div>' +

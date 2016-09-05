@@ -96,22 +96,28 @@
     overflow: hidden;
 
     .carousel-item__star {
-      float: right;
+      position: absolute;
+      right: 10px;
+      top: 10px;
 
-      img {
-        display: inline;
+      svg {
+        fill: @primary-text-color;
         margin-right: 5px;
       }
 
-      img, span {
+      span {
+        font-size: 16px;
+      }
+
+      svg, span {
         vertical-align: middle;
       }
     }
 
-    .carousel-item__title {
+    .carousel-item__title,
+    .carousel-item__star {
       color: @primary-text-color;
       font-family: "FuturaMedium";
-      margin: 0 0 15px;
       font-size: 16px;
       line-height: 16px;
 
@@ -120,6 +126,14 @@
         line-height: 22px;
         letter-spacing: 0px;
       }
+    }
+
+    .carousel-item__title {
+      margin: 0 0 15px;
+      overflow: hidden;
+      padding-right: 30px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .carousel-item__description {

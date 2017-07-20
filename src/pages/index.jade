@@ -75,23 +75,23 @@ html
           img(src="./images/close_menu_button.png" class="close-button" alt="Close Menu")
 
         a(href="#header" class="nav-item")
-          .item-number 01
-          .item-name Who we are
+          span.item-number 01
+          span.item-name Who we are
         a(href="#tools" class="nav-item")
-          .item-number 02
-          .item-name The Tools We Use
+          span.item-number 02
+          span.item-name The Tools We Use
         a(href="#partners" class="nav-item")
-          .item-number 03
-          .item-name Our Objectives
+          span.item-number 03
+          span.item-name Our Objectives
         a(href="#business" class="nav-item")
-          .item-number 04
-          .item-name Business model
+          span.item-number 04
+          span.item-name Business model
         a(href="#github" class="nav-item")
-          .item-number 05
-          .item-name Open source projects
+          span.item-number 05
+          span.item-name Open source projects
         a(href="#contact" class="nav-item")
-          .item-number 06
-          .item-name Connect with us
+          span.item-number 06
+          span.item-name Connect with us
 
     section#tools
       h2.section-heading The Tools we use
@@ -164,9 +164,9 @@ html
       hr
       .social
         a(href="https://github.com/kogosoftwarellc")
-          .github
+          span.github
         a(href="https://www.linkedin.com/company/kogo-software-llc")
-          .linkedin
+          span.linkedin
 
       .address
         span(class="line-one") Kogo Software, LLC  &nbsp; PO Box 30224
@@ -181,6 +181,7 @@ html
 
     script(src="https://code.jquery.com/jquery-2.2.1.min.js")
     script(src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+    script(src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js")
     script
       include ../../dist/index.js
       include ../../node_modules/post-rendered-height/post-rendered-height.js
